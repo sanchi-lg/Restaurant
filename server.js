@@ -1,19 +1,15 @@
 const express = require('express')
 const app = express()
 const cors = require('cors')
-const mongoose = require('mongoose')
 const bodyParser = require('body-parser')
 const MongoClient = require('mongodb').MongoClient
-const MONGO_URL = "mongodb://localhost/r"
-const MONGODB_URL = "mongodb://127.0.0.1:27017/r"
+const MONGODB_URL = process.env.MONGODB_URL
 const PORT = process.env.PORT || 9000
 var fs = require('fs')
-mongoose.connect(MONGO_URL, { useNewUrlParser: true, useUnifiedTopology: true });
 
 app.use(cors())
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
-let orderModel = require('./order')
 app.use(bodyParser.urlencoded({ extended: false }))
 
 app.use(bodyParser.json())
@@ -63,10 +59,7 @@ app.get("/getitemrate/:v", (req, res) => {
         const db = client.db('ital')
         var ob = []
         db.collection('product').findOne({ item: v }, (err, data) => {
-            console.log(data);
-            console.log(data.rate);
             res.json(data.rate)
-            console.log();
         })
 
 
@@ -104,34 +97,16 @@ app.post("/login", (req, res) => {
 
 app.post("/addorder/:id", async (req, res) => {
     let id = req.params.id
-    console.log(id);
     let item = req.body.item
     let quantity = req.body.quantity
     let total = req.body.total
-
-
-    // orderModel.update({ "loginid": id }, { $push:{products:{item:item,quantity:quantity,total:total,date:((new Date()).getDate()+"-"+(new Date()).getMonth()+"-"+(new Date()).getFullYear())}} }, (err, data) => {
-    //     console.log(err);
-    //     console.log(data);
-    //     if (err || data.nModified == 0) {
-    //         res.json({ err: 1, mssg: "something went wrong" })
-    //     }
-    //     else {
-    //         res.json({ err: 0, mssg: "order is placed successfully" })
-    //     }
-
-    // })
-
-
 
 
     MongoClient.connect(MONGODB_URL, { useNewUrlParser: true, useUnifiedTopology: true }, async function (err, client) {
         const db = client.db('ital')
         var ob = []
         db.collection('employee').updateOne({ "loginid": id }, { $push: { products: { item: item, quantity: quantity, total: total, date: ((new Date()).getDate() + "-" + (new Date()).getMonth() + "-" + (new Date()).getFullYear()) } } }, (err, data) => {
-            console.log(err);
-            console.log(data);
-
+          
             if (err || data.nModified == 0) {
                 res.json({ err: 1, mssg: "something went wrong" })
             }
@@ -140,7 +115,6 @@ app.post("/addorder/:id", async (req, res) => {
             }
         }
         )
-        //     })
 
 
     })
@@ -155,17 +129,11 @@ app.post("/addorder/:id", async (req, res) => {
             const db = client.db('ital')
             var ob = []
             db.collection('employee').findOne({ "loginid": id }, (err, data) => {
-                console.log(data);
                 res.json(data.products)
                 
-                console.log();
             })
 
 
         })
 
-        // orderModel.findOne({loginid:id},(err,data)=>{
-        //     res.json(data.products)
-        // })
-
-    })
+       

@@ -12,38 +12,40 @@
 
 ### Features
 *  Login Page
-*  Home page
-*  Add Order
+*  Welcome page
+*  Place Order
 *  Reports(line chart,bar graph, pie chart)
+*  Logout
 
-### Demo
+
+#### Demo
 
 
 <p align="center">
   
-  ## Login
+  ##### Login
   
-<img src="images/ital1.JPG" height="70%" width="70%" >
+<img src="images/ital1.JPG" height="90%" width="90%" >
   <br/>
   
-  ## Welcome
+  ##### Welcome
   
-  <img src="images/ital2u.JPG" height="70%" width="70%" >
+  <img src="images/ital2u.JPG" height="90%" width="90%" >
   <br/>
   
-  ## Add Order
+  ##### Add Order
 
   
-  <img src="images/ital3.JPG" height="70%" width="70%" >
+  <img src="images/ital3.JPG" height="90%" width="90%" >
   <br/>
   
-  <img src="images/ital4.JPG" height="70%" width="70%" >
+  <img src="images/ital4.JPG" height="90%" width="90%" >
   <br/>
   
-  ## Order Reports
-  <img src="images/ital5.JPG" height="70%" width="70%" >
+  ##### Order Reports
+  <img src="images/ital5.JPG" height="90%" width="90%" >
   <br/>
   
-   <img src="images/ital6.JPG" height="70%" width="70%" >
+   <img src="images/ital6.JPG" height="90%" width="90%" >
   <br/>
 </p>

@@ -33,25 +33,25 @@
 <img src="images/1u.PNG" height="90%" width="90%" >
   <br/>
   
-    ##### Add Item
+  ##### Add Item
   
 <img src="images/i1.PNG" height="90%" width="90%" >
   <br/>
   
-    ##### Items
+  ##### Items
   
 <img src="images/i2.PNG" height="90%" width="90%" >
   <br/>
   
   
     
-    ##### Delete Item
+  ##### Delete Item
   
 <img src="images/i3.PNG" height="90%" width="90%" >
   <br/>
   
       
-    ##### Delete Item
+  ##### Search Item
   
 <img src="images/i4.PNG" height="90%" width="90%" >
   <br/>
@@ -62,16 +62,16 @@
   ##### Add Order
 
   
-  <img src="images/2u.JPG" height="90%" width="90%" >
+  <img src="images/2u.PNG" height="90%" width="90%" >
   <br/>
   
-  <img src="images/3u.JPG" height="90%" width="90%" >
+  <img src="images/3u.PNG" height="90%" width="90%" >
   <br/>
   
   <img src="images/4u.PNG" height="90%" width="90%" >
   <br/>
   
-    ##### Remove item from order
+  ##### Remove item from order
 
   
   <img src="images/5u.PNG" height="90%" width="90%" >

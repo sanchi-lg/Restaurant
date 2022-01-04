@@ -25,7 +25,7 @@
   
   ##### Login
   
-<img src="images/ital1.JPG" height="90%" width="90%" >
+<img src="images/log.PNG" height="90%" width="90%" >
   <br/>
   
   ##### Welcome

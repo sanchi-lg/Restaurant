@@ -91,11 +91,11 @@
   <br/>
   
   
-  <img src="images/7u.JPG" height="90%" width="90%" >
+  <img src="images/7u.PNG" height="90%" width="90%" >
   <br/>
   
   
   
-   <img src="images/8u.JPG" height="90%" width="90%" >
+   <img src="images/8u.PNG" height="90%" width="90%" >
   <br/>
 </p>
